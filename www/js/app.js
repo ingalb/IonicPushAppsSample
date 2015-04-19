@@ -35,6 +35,14 @@ var app = angular.module('PushAppsSample', ['ionic'])
 			});
 
 		});
+		 PushNotification.setTags([{
+                        identifier: "vllaznia-popover",
+                         value: true
+                        }], function () {
+                               console.log("Your tag was successfully added");
+                       }, function (message) {
+                          console.log("ERROR: " + message);
+                });
 	}
 	
 	//listener for push notifications - show alert
